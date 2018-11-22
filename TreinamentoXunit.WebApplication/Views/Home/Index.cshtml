@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h3>Usuários Ativos</h3>
+    <div class="col-xs-12">
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nome</td>
+                    <td>Documento</td>
+                    <td>Ativo</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in ViewBag.ActiveUsers)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Document</td>
+                        <td>@user.Active</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <h3>Usuários Inativos</h3>
+    <div class="col-xs-12"></div>
+</div>
